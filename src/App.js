@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Car from "./Car/Car";
 
 function App() {
+  const divStyle = {
+    textAlign: 'left',
+    paddingLeft: '910px',
+    paddingTop: '100px'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={divStyle} className="App">
+    <h1 style={{ fontSize: '50px', color: 'red'}}>Hello Sonya!</h1>
+      <Car name='Ferrari 599' year={2020}><p style={{color: 'red'}}>COLOR</p></Car>
+      <Car name='BMW M3 COUPE' year={2005}><p style={{color: 'black'}}>COLOR</p></Car>
+      <Car name='TOYOTA GT 86' year={2015}><p style={{color: 'yellow'}}>COLOR</p></Car>
     </div>
   );
 }
